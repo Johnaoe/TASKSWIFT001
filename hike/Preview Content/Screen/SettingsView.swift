@@ -54,7 +54,29 @@ struct SettingsView: View {
             .listRowSeparator(.hidden)
         //  MARK: - SECTION: HEADER
         
-        //  MARK: - SECTION: HEADER
+        //  MARK: - SECTION: ABOUT
+            Section (
+            header: Text("About The APP"),
+            footer: HStack{
+                Spacer()
+                Text("Copyright @ All rights reserved.")
+                Spacer()
+            }
+                .padding(.vertical, 8)
+            ){
+                // 1. Basic labeled content
+//                LabeledContent("Application", value: "Hike")
+                
+                CustomListRowView(rowLabel: "Application", rowIcon: "apps.iphone", rowContent: "HIKE", rowTintColor: .blue)
+                CustomListRowView(rowLabel: "Compatability", rowIcon: "info.circle", rowContent: "iOS, iPadOS", rowTintColor: .red)
+                CustomListRowView(rowLabel: "Technology", rowIcon: "swift", rowContent: "Swift", rowTintColor: .orange)
+                CustomListRowView(rowLabel: "Version", rowIcon: "gear", rowContent: "1.0", rowTintColor: .purple)
+                CustomListRowView(rowLabel: "Developer", rowIcon: "ellipsis.curlybraces", rowContent: "John Naoe", rowTintColor: .mint)
+                CustomListRowView(rowLabel: "Designer", rowIcon: "paintpalette", rowContent: "Petras Rob", rowTintColor: .indigo)
+                CustomListRowView(rowLabel: "Website", rowIcon: "globe", rowTintColor: .indigo, rowLinkLabel: "Johnaoe", rowLinkDestination: "https://github.com/Johnaoe")
+                // 2. Advandced lablede content
+
+            }//: SECTION
         }
     }   //: LIST
 }
